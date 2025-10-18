@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://3dsx5278428q"]
+
+[ext_resource type="Texture2D" uid="uid://f6yx5u7u24xv" path="res://villano.png" id="1_f4clj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f4clj"]
+size = Vector2(165.45378, 139.09091)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.4999999, 3)
+scale = Vector2(0.10274773, 0.21568628)
+shape = SubResource("RectangleShape2D_f4clj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.0000005, -4.7683716e-07)
+scale = Vector2(0.10274777, 0.21568628)
+texture = ExtResource("1_f4clj")

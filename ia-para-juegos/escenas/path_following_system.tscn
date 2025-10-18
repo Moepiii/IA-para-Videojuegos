@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://beq3qklvr3vby"]
+
+[ext_resource type="Script" uid="uid://biuss22uoig1w" path="res://escenas/path_following_system.gd" id="1_yq1cb"]
+
+[sub_resource type="Curve2D" id="Curve2D_ylxmx"]
+
+[node name="PathFollowingSystem" type="Node2D"]
+script = ExtResource("1_yq1cb")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_ylxmx")
+
+[node name="Line2D" type="Line2D" parent="."]

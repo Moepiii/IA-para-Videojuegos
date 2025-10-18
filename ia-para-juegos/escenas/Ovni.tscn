@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfovud57uulik"]
+
+[ext_resource type="Texture2D" uid="uid://b87usa7iewvv1" path="res://ovni.png" id="1_jkkef"]
+
+[node name="CharacterBody2D2" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(13.000003, -21.499996)
+scale = Vector2(0.5538462, 0.46812382)
+texture = ExtResource("1_jkkef")

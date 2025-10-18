@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://ohv2tg0ae2ua"]
+
+[ext_resource type="Texture2D" uid="uid://djsgw5x02tufq" path="res://Screenshot_64-removebg-preview.png" id="1_qfwym"]
+[ext_resource type="Script" uid="uid://bow2ap78261rh" path="res://escenas/meteorito.gd" id="1_ylvpe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fgml2"]
+size = Vector2(53, 64)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_ylvpe")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4.1249986, -11.749995)
+scale = Vector2(0.2921456, 0.22786884)
+texture = ExtResource("1_qfwym")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -17)
+shape = SubResource("RectangleShape2D_fgml2")
+disabled = true
