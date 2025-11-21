@@ -2,17 +2,18 @@
 
 [ext_resource type="Texture2D" uid="uid://f6yx5u7u24xv" path="res://villano.png" id="1_f4clj"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_f4clj"]
-size = Vector2(165.45378, 139.09091)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f4clj"]
+radius = 9.732575
+height = 38.9303
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.4999999, 3)
-scale = Vector2(0.10274773, 0.21568628)
-shape = SubResource("RectangleShape2D_f4clj")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1.0000005, -4.7683716e-07)
-scale = Vector2(0.10274777, 0.21568628)
+position = Vector2(5.9604645e-08, 1.0000002)
+scale = Vector2(0.02211045, 0.027113972)
 texture = ExtResource("1_f4clj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+scale = Vector2(0.10274773, 0.21568628)
+shape = SubResource("CapsuleShape2D_f4clj")
