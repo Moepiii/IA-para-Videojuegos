@@ -15,7 +15,7 @@ var current_state: State = State.IDLE
 @export var acceleration: float = 10.0
 @export var rotation_speed: float = 8.0
 @export var sprite_faces_up: bool = true
-@export var vision_range: float = 100.0
+@export var vision_range: float = 400.0
 @export var arrival_threshold: float = 15.0
 
 # --- REFERENCIAS ---
@@ -35,8 +35,16 @@ var last_known_player_pos: Vector2 = Vector2.ZERO
 var habitacion_actual_npc: Node = null
 var cooldown_teletransporte: bool = false 
 
-# Variable Táctica: ¿Ya fui al centro de esta sala?
+# Variable Táctica
 var is_at_tactical_post: bool = false
+
+# --- [NUEVO] PERFIL TÁCTICO: EL CAZADOR ---
+var mis_pesos = {
+	"w_cobertura": 0.0,
+	"w_luz": 10.0,       # ODIA LA LUZ (Gran Positivo: Evita a toda costa)
+	"w_alto": -0.5,      # Le gusta la altura (Pequeño Negativo)
+	"w_peligro": -0.2    # Le gusta el jugador (Pequeño Negativo: Agresivo)
+}
 
 func _ready():
 	idle_timer = Timer.new()
@@ -55,12 +63,11 @@ func _ready():
 
 # --- 🌀 AL CRUZAR PORTAL ---
 func recibir_teletransporte():
-	print("👻 Stalker en nueva sala. Buscando centro...")
+	print("👻 Stalker cruzó. Reiniciando táctica...")
 	velocity = Vector2.ZERO
 	ruta_manual.clear()
 	cooldown_teletransporte = true
 	
-	# [CRUCIAL] Reseteamos la táctica para obligarlo a ir al centro
 	is_at_tactical_post = false 
 	
 	if region_graph:
@@ -108,12 +115,10 @@ func _physics_process(delta):
 	if cooldown_teletransporte: return
 	if not player or not region_graph: return
 
-	# 1. Actualizar ubicación
 	var nueva_sala = region_graph.get_region_node_from_body(self)
 	if nueva_sala and nueva_sala != habitacion_actual_npc:
 		_actualizar_grafo_navegacion(nueva_sala)
 
-	# 2. Detección
 	var veo_jugador = can_see_player()
 	
 	if veo_jugador:
@@ -121,18 +126,14 @@ func _physics_process(delta):
 		if current_state != State.CHASE:
 			set_state(State.CHASE)
 	
-	# 3. Ejecución de Movimiento
 	match current_state:
 		State.IDLE:
 			velocity = velocity.lerp(Vector2.ZERO, acceleration * delta)
 			move_and_slide()
-			
 		State.PATROL:
 			_mover_por_ruta(delta)
-			
 		State.SEARCH:
 			_mover_por_ruta(delta)
-			
 		State.CHASE:
 			_mover_persecucion_hibrida(delta)
 			
@@ -143,72 +144,72 @@ func _physics_process(delta):
 func _mover_persecucion_hibrida(delta):
 	var player_room = region_graph.get_region_node_from_body(player)
 	
-	# PROTECCIÓN: Si no sé dónde estoy, busco al jugador directo
 	if not habitacion_actual_npc:
 		_comportamiento_directo(delta)
 		return
 
-	# REGLA 1: Si no he ido al centro, VOY AL CENTRO (Ignoro jugador)
+	# Prioridad: Ir al centro si no lo he hecho
 	if not is_at_tactical_post:
 		_comportamiento_tactico_nodos(delta)
 		return
 
-	# REGLA 2: Si ya fui al centro, decido según dónde esté el jugador
 	if player_room == habitacion_actual_npc:
-		_comportamiento_tactico_nodos(delta) # Atacar usando nodos
+		_comportamiento_tactico_nodos(delta)
 	else:
-		_comportamiento_directo(delta) # Perseguir a otra sala
+		_comportamiento_directo(delta)
 
 
 # --- COMPORTAMIENTO A: INTELIGENTE / TÁCTICO ---
 func _comportamiento_tactico_nodos(delta):
+	if not habitacion_actual_npc:
+		_comportamiento_directo(delta)
+		return
+
 	var objetivo_final = Vector2.ZERO
 	
-	# 1. Obtener posición del Marker2D (Centro Táctico)
+	# 1. Buscar Centro
 	var centro_sala = Vector2.ZERO
 	if habitacion_actual_npc.has_node("Marker2D"):
 		centro_sala = habitacion_actual_npc.get_node("Marker2D").global_position
 	else:
-		# Si la sala no tiene Marker, usamos su posición global como fallback
 		centro_sala = habitacion_actual_npc.global_position 
 	
+	# Fallback si no hay grafo
+	if not room_graph_manual or not "astar" in room_graph_manual:
+		if not is_at_tactical_post:
+			_mover_directo_a_punto(centro_sala, delta)
+			if global_position.distance_to(centro_sala) < 30.0: is_at_tactical_post = true
+		else:
+			_comportamiento_directo(delta)
+		return
+
 	# --- FASE 1: IR AL CENTRO ---
 	if not is_at_tactical_post:
 		objetivo_final = centro_sala
-		
-		# Chequear si llegamos
-		if global_position.distance_to(centro_sala) < 30.0:
+		if global_position.distance_to(centro_sala) < 40.0:
 			is_at_tactical_post = true
-			print("👻 Stalker: Centro asegurado. ¡Ahora voy por ti!")
-			# Pequeño hack: Retornamos para que en el siguiente frame recalcule hacia el jugador
+			print("👻 Stalker: Centro asegurado. Iniciando caza.")
 			return 
-	
 	# --- FASE 2: IR A POR EL JUGADOR ---
 	else:
 		objetivo_final = player.global_position
 
-	# --- CÁLCULO DE RUTA ---
+	# --- CÁLCULO DE RUTA TÁCTICA ---
+	# [CAMBIO] Usamos obtener_ruta_tactica para evitar la luz incluso al atacar
+	var ruta_tactica = room_graph_manual.obtener_ruta_tactica(
+		global_position, 
+		objetivo_final, 
+		mis_pesos, 
+		player.global_position
+	)
 	
-	# Si no hay grafo de nodos, vamos directo al objetivo (sea centro o jugador)
-	if not room_graph_manual or not "astar" in room_graph_manual:
+	# Si la ruta está vacía o es directa
+	if ruta_tactica.size() <= 1:
 		_mover_directo_a_punto(objetivo_final, delta)
 		return
 
-	var id_npc = room_graph_manual.astar.get_closest_point(global_position)
-	var id_target = room_graph_manual.astar.get_closest_point(objetivo_final)
-	
-	# [ATAQUE FINAL] Si ya estoy atacando y no hay nodos en medio...
-	if is_at_tactical_post and id_npc == id_target:
-		_mover_directo_a_punto(player.global_position, delta)
-		return
-
-	# Navegación normal por nodos
-	var siguiente_punto = objetivo_final
-	if id_npc != -1 and id_target != -1:
-		var r = room_graph_manual.astar.get_point_path(id_npc, id_target)
-		if r.size() > 1: siguiente_punto = r[1]
-		elif r.size() == 1: siguiente_punto = r[0]
-	
+	# Tomamos el siguiente punto de la ruta táctica
+	var siguiente_punto = ruta_tactica[1] # [0] es el inicio
 	_mover_directo_a_punto(siguiente_punto, delta)
 
 
@@ -253,14 +254,17 @@ func _on_idle_timer_timeout():
 		set_state(State.PATROL)
 
 func _calcular_ruta_hacia(destino: Vector2):
-	if room_graph_manual and "astar" in room_graph_manual:
-		var id_ini = room_graph_manual.astar.get_closest_point(global_position)
-		var id_fin = room_graph_manual.astar.get_closest_point(destino)
-		if id_ini != -1 and id_fin != -1:
-			ruta_manual = room_graph_manual.astar.get_point_path(id_ini, id_fin)
-			indice_ruta = 0
-		else:
-			ruta_manual = []
+	if room_graph_manual and room_graph_manual.has_method("obtener_ruta_tactica"):
+		# [CAMBIO] Usar ruta táctica
+		ruta_manual = room_graph_manual.obtener_ruta_tactica(
+			global_position, 
+			destino, 
+			mis_pesos, 
+			player.global_position
+		)
+		indice_ruta = 0
+	else:
+		ruta_manual = []
 
 func _get_random_waypoint() -> Vector2:
 	if room_graph_manual and "astar" in room_graph_manual:

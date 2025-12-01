@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://bhnlnw0ciuuqs"]
+[gd_scene load_steps=22 format=4 uid="uid://bhnlnw0ciuuqs"]
 
 [ext_resource type="Texture2D" uid="uid://baktkjk4e3w7t" path="res://escenas/Screenshot_30.png" id="1_mrmus"]
 [ext_resource type="Script" uid="uid://bwofmv2k2p62p" path="res://escenas/limpiar.gd" id="1_nv0ic"]
@@ -14,13 +14,12 @@
 [ext_resource type="Script" uid="uid://bx82h08dav7k2" path="res://escenas/npc_cobarde.gd" id="7_jv425"]
 [ext_resource type="Script" uid="uid://dbxvtnqm6k2m2" path="res://escenas/npc_stalker.gd" id="9_6hskd"]
 [ext_resource type="Script" uid="uid://b75y3k3llmkpr" path="res://escenas/PasilloGraph.gd" id="10_px638"]
-[ext_resource type="Script" uid="uid://bv74v765mldpd" path="res://escenas/TacticalWaypoint.gd" id="10_sr51t"]
 [ext_resource type="Script" uid="uid://dm7tgb4ia43bu" path="res://escenas/Teletransportador.gd" id="15_x241o"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_4b0hs"]
-vertices = PackedVector2Array(-2260.3984, 3228.6016, -2283.6016, 3228.6016, -2283.6016, 3155.3984, -2260.3984, 3155.3984, -2021.3984, 3196.6016, -2075.6016, 3196.6016, -2075.6016, 3155.3984, -2021.3984, 3155.3984, -1685.3984, 3164.6016, -1772.5313, 3164.6016, -1771.6719, 3123.3984, -1685.3984, 3123.3984, -1379.3984, 2988.6016, -1420.6016, 2988.6016, -1420.6016, 2947.3984, -1379.3984, 2947.3984, -1635.3984, 2884.3672, -1635.3984, 2987.5234, -1675.6016, 2986.6719, -1675.6016, 2923.5625, -1765.6016, 2883.4219, -1765.6016, 2924.5625, -2229.4688, 2908.6016, -2268.5313, 2908.6016, -2267.6719, 2867.3984, -2230.3281, 2867.3984, -2147.3984, 2794.6016, -2188.6016, 2794.6016, -2188.6016, 2709.3984, -2147.3984, 2709.3984, -2014.5703, 2652.6016, -2058.6719, 2652.6016, -2059.5313, 2595.3984, -1796.3984, 2595.3984, -1963.6016, 2651.5313, -1796.3984, 2652.6016, -1907.3984, 2652.6016, -1963.6016, 2776.6016, -1907.3984, 2776.6016, -1356.6016, 2780.6016, -1411.3984, 2780.6016, -1404.6016, 2755.3984, -1331.3984, 2691.3984, -1331.3984, 2938.3828, -1355.5469, 2899.3828, -1356.6016, 2826.6875, -1370.9531, 2936.6016, -1507.3984, 2900.4219, -1580.6016, 2940.5313, -1436.6016, 2755.3984, -1436.6016, 2787.3984, -1411.3984, 2796.6016, -1428.3984, 2796.6016, -1404.6016, 2732.6016, -1580.6016, 2691.3984, -1555.3672, 2732.6016, -1556.4297, 2851.3984, -1516.7031, 2851.3984, -1507.3984, 2875.6016, -1492.6172, 2860.8125, -1491.6328, 2875.6016, -1460.3984, 2828.6016, -1484.6016, 2819.3984, -1484.6016, 2803.3984, -1467.6016, 2803.3984, -1443.3984, 2812.6016, -1443.3984, 2828.6016, -1467.6016, 2787.3984, -1428.3984, 2812.6016, -1460.3984, 2844.6016, -1475.3984, 2844.6016, -1475.3984, 2859.789, -1515.7031, 2819.3984, -1539.3984, 3235.3984, -1516.6016, 3235.3984, -1379.3984, 3244.6016, -1527.9766, 3244.6016, -1676.6016, 3243.6172, -1516.6016, 3091.3984, -1516.6016, 3004.6016, -1379.3984, 2996.3984, -1676.6016, 2996.3984, -1539.3984, 3004.6016, -1539.3984, 3132.6016, -1539.3984, 3091.3984, -1516.6016, 3132.6016, -1635.3984, 2563.3984, -1635.3984, 2700.6016, -1676.6016, 2659.3984, -1676.6016, 2620.6016, -1692.6016, 2620.6016, -1692.6016, 2604.6016, -1788.6016, 2563.3984, -1731.3984, 2604.6016, -1731.3984, 2620.6016, -1747.3984, 2620.6016, -1788.6016, 2700.6016, -1747.3984, 2659.3984, -1731.3984, 2659.3984, -1731.3984, 2675.3984, -1692.6016, 2675.3984, -1692.6016, 2659.3984, -1923.3984, 3171.3984, -1867.5313, 3171.3984, -1780.3984, 3244.6016, -1919.9609, 3244.6016, -2011.6094, 3243.6328, -1780.3984, 3043.3984, -1868.6719, 3116.6016, -2012.5781, 3043.3984, -1923.3984, 3116.6016, -2060.6016, 2987.6016, -1980.6016, 2915.3984, -1843.3984, 2899.3984, -1804.6016, 2899.3984, -1779.3984, 2987.6016, -1779.3984, 2788.3594, -1804.6016, 2860.6016, -1884.6016, 2883.3984, -1923.3984, 2883.3984, -1923.3984, 2828.6016, -1980.6016, 2876.6016, -1964.6016, 2787.3984, -1843.3984, 2860.6016, -1884.6016, 2828.6016, -1872.3828, 2787.3984, -1907.3984, 2787.3984, -2019.3984, 2915.3984, -2060.6016, 2787.3984, -2019.3984, 2876.6016, -1907.3984, 2787.0234, -1964.6016, 2786.4297, -2124.6016, 2675.3984, -2067.4297, 2700.6016, -2268.6016, 2700.6016, -2211.3984, 2675.3984, -2068.3828, 2563.3984, -2124.6016, 2588.6016, -2268.6016, 2563.3984, -2211.3984, 2588.6016, -2140.6016, 2883.3984, -2140.6016, 2860.6016, -2116.3828, 2804.3984, -2115.4219, 2988.6016, -2140.6016, 2931.3984, -2220.6016, 2988.6016, -2195.3984, 2931.3984, -2220.6016, 2804.3984, -2195.3984, 2908.6016, -2156.6016, 2860.6016, -2156.6016, 2844.6016, -2179.3984, 2844.6016, -2179.3984, 2860.6016, -2195.3984, 2860.6016, -2195.3984, 2883.3984, -2140.6016, 2908.6016, -2083.3984, 3244.6016, -2251.6719, 3244.6016, -2188.6016, 3203.3984, -2124.6016, 3171.3984, -2108.6016, 3107.3984, -2108.6016, 3068.6016, -2083.3984, 3043.3984, -2124.6016, 3148.6016, -2227.3984, 3203.3984, -2227.3984, 3164.6016, -2252.9375, 3155.3984, -2252.6016, 3155.3984, -2179.3984, 3171.3984, -2188.6016, 3180.6016, -2147.3984, 3043.3984, -2147.3984, 3068.6016, -2147.3984, 3107.3984, -2140.6016, 3132.6016, -2163.3984, 3132.6016, -2172.6016, 3107.3984, -2172.6016, 3084.6016, -2188.6016, 3084.6016, -2188.6016, 3068.6016, -2227.3984, 3091.3984, -2211.3984, 3091.3984, -2211.3984, 3107.3984, -2140.6016, 3148.6016, -2163.3984, 3148.6016, -2179.3984, 3148.6016, -2204.6016, 3180.6016, -2204.6016, 3164.6016, -2188.6016, 3043.3984, -2188.6016, 2997.3984, -2147.3984, 2997.3984, -2227.3984, 3068.6016, -2252.6016, 3043.3984, -2300.6016, 2883.3984, -2300.6016, 2828.6016, -2275.3984, 2788.3672, -2275.3984, 2988.6016, -2299.6016, 2892.6016, -2396.6016, 2787.4219, -2368.9375, 2828.6016, -2372.461, 2828.5313, -2371.3984, 2947.3984, -2396.6016, 2988.6016, -2371.4766, 2883.3984, -2371.3984, 2892.6016, -2299.6016, 2947.3984, -2291.3984, 3123.3984, -2291.3984, 3244.5625, -2300.6016, 3219.3984, -2300.6016, 3164.6016, -2323.3984, 3164.6016, -2323.3984, 3219.3984, -2348.6016, 3203.3984, -2348.6016, 3148.6016, -2396.6016, 3243.6328, -2371.3984, 3203.3984, -2396.6016, 3123.3984, -2371.3984, 3148.6016)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(8, 9, 10, 11), PackedInt32Array(12, 13, 14, 15), PackedInt32Array(16, 17, 18, 19), PackedInt32Array(20, 16, 19, 21), PackedInt32Array(22, 23, 24, 25), PackedInt32Array(26, 27, 28, 29), PackedInt32Array(30, 31, 32, 33, 34), PackedInt32Array(34, 33, 35, 36), PackedInt32Array(37, 34, 36, 38), PackedInt32Array(39, 40, 41, 42), PackedInt32Array(42, 43, 44, 45, 39), PackedInt32Array(44, 43, 46, 47), PackedInt32Array(47, 46, 48), PackedInt32Array(49, 41, 40, 50), PackedInt32Array(50, 40, 51, 52), PackedInt32Array(42, 41, 53), PackedInt32Array(54, 42, 53, 55), PackedInt32Array(48, 54, 55, 56), PackedInt32Array(47, 48, 56, 57, 58), PackedInt32Array(59, 60, 58, 57), PackedInt32Array(61, 62, 63, 64, 65, 66), PackedInt32Array(65, 64, 67, 50, 52, 68), PackedInt32Array(61, 69, 70, 62), PackedInt32Array(71, 59, 57, 72, 62, 70), PackedInt32Array(73, 74, 75, 76, 77), PackedInt32Array(78, 79, 80, 75), PackedInt32Array(81, 80, 79, 82), PackedInt32Array(73, 77, 81, 83), PackedInt32Array(81, 82, 84), PackedInt32Array(83, 81, 84, 85), PackedInt32Array(85, 84, 78, 75), PackedInt32Array(85, 75, 74), PackedInt32Array(86, 87, 88, 89), PackedInt32Array(89, 90, 91, 86), PackedInt32Array(92, 86, 91, 93), PackedInt32Array(93, 94, 95, 92), PackedInt32Array(96, 92, 95, 97), PackedInt32Array(97, 98, 99, 96), PackedInt32Array(87, 96, 99, 100), PackedInt32Array(88, 87, 100, 101), PackedInt32Array(102, 103, 104, 105, 106), PackedInt32Array(107, 104, 103, 108), PackedInt32Array(109, 107, 108, 110), PackedInt32Array(106, 109, 110, 102), PackedInt32Array(111, 112, 113, 114, 115), PackedInt32Array(116, 115, 114, 117), PackedInt32Array(118, 113, 112, 119), PackedInt32Array(120, 119, 112, 121, 122), PackedInt32Array(123, 113, 118, 124, 125), PackedInt32Array(125, 116, 117, 123), PackedInt32Array(126, 125, 124, 120), PackedInt32Array(127, 112, 111), PackedInt32Array(127, 111, 128, 129), PackedInt32Array(129, 128, 122, 121), PackedInt32Array(130, 126, 120, 122, 131), PackedInt32Array(132, 133, 134, 135), PackedInt32Array(136, 133, 132, 137), PackedInt32Array(138, 136, 137, 139), PackedInt32Array(135, 134, 138, 139), PackedInt32Array(140, 141, 142, 143), PackedInt32Array(144, 143, 145, 146), PackedInt32Array(146, 145, 147, 148), PackedInt32Array(141, 149, 150, 142), PackedInt32Array(147, 142, 150, 151), PackedInt32Array(151, 152, 153, 147), PackedInt32Array(147, 153, 154), PackedInt32Array(148, 147, 154), PackedInt32Array(155, 148, 154, 140), PackedInt32Array(155, 140, 143), PackedInt32Array(155, 143, 144), PackedInt32Array(156, 157, 158, 159), PackedInt32Array(160, 161, 162, 156), PackedInt32Array(160, 156, 159, 163), PackedInt32Array(164, 158, 157), PackedInt32Array(165, 164, 157, 166, 167), PackedInt32Array(168, 159, 158, 169), PackedInt32Array(170, 162, 161, 171), PackedInt32Array(172, 160, 163, 173), PackedInt32Array(171, 172, 174, 175, 176), PackedInt32Array(176, 177, 178), PackedInt32Array(167, 179, 180, 181, 165), PackedInt32Array(163, 182, 173), PackedInt32Array(172, 173, 174), PackedInt32Array(175, 174, 183, 184, 181), PackedInt32Array(168, 169, 185, 186, 184), PackedInt32Array(187, 188, 189, 170), PackedInt32Array(187, 170, 171, 176, 178), PackedInt32Array(187, 178, 190, 191), PackedInt32Array(167, 191, 190, 179), PackedInt32Array(186, 165, 181, 184), PackedInt32Array(192, 193, 194, 195, 196), PackedInt32Array(197, 194, 193, 198, 199), PackedInt32Array(200, 201, 197, 199, 202, 203), PackedInt32Array(204, 195, 201, 200), PackedInt32Array(203, 202, 192, 196), PackedInt32Array(196, 195, 204), PackedInt32Array(205, 206, 207, 208), PackedInt32Array(209, 210, 211, 212), PackedInt32Array(207, 206, 213, 210), PackedInt32Array(211, 210, 213, 214), PackedInt32Array(214, 213, 215, 216), PackedInt32Array(216, 215, 205, 212), PackedInt32Array(212, 205, 208, 209)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-2400, 3120, -2288, 3120, -2288, 3248, -2400, 3247, -2400, 3247), PackedVector2Array(-2287, 3152, -2287, 3232, -2257, 3232, -2257, 3152), PackedVector2Array(-2258, 3040, -2255, 3249, -2080, 3249, -2080, 3040), PackedVector2Array(-2079, 3151, -2079, 3201, -2018, 3200, -2018, 3152), PackedVector2Array(-1920, 3120, -1872, 3120, -1871, 3168, -1920, 3168, -1920, 3248, -1777, 3248, -1777, 3040, -2016, 3040, -2015, 3247, -1920, 3248), PackedVector2Array(-1776, 3168, -1775, 3120, -1682, 3120, -1682, 3168), PackedVector2Array(-1680, 3247, -1680, 2993, -1376, 2993, -1376, 3249), PackedVector2Array(-1425, 2992, -1376, 2992, -1376, 2944, -1425, 2944), PackedVector2Array(-1584, 2944, -1371, 2940, -1327, 2942, -1328, 2688, -1362, 2688, -1359, 2896, -1504, 2897, -1504, 2879, -1488, 2879, -1489, 2864, -1472, 2863, -1472, 2848, -1457, 2848, -1457, 2832, -1440, 2832, -1440, 2816, -1425, 2816, -1425, 2800, -1408, 2800, -1408, 2784, -1360, 2784, -1362, 2688, -1585, 2688, -1585, 2736, -1408, 2736, -1408, 2750, -1440, 2751, -1440, 2784, -1471, 2784, -1471, 2800, -1488, 2800, -1488, 2816, -1519, 2816, -1520, 2848, -1553, 2848, -1552, 2736, -1585, 2736), PackedVector2Array(-1769, 2928, -1679, 2927, -1679, 2990, -1632, 2991, -1632, 2881, -1769, 2880), PackedVector2Array(-2065, 2782, -1776, 2785, -1776, 2991, -2065, 2991), PackedVector2Array(-1967, 2780, -1967, 2655, -2062, 2657, -2063, 2591, -1793, 2591, -1793, 2656, -1904, 2657, -1904, 2780), PackedVector2Array(-2272, 2560, -2065, 2560, -2064, 2705, -2128, 2705, -2128, 2592, -2208, 2592, -2208, 2672, -2128, 2672, -2127, 2704, -2272, 2704), PackedVector2Array(-2192, 2706, -2144, 2706, -2144, 2798, -2192, 2798), PackedVector2Array(-2224, 2801, -2113, 2801, -2112, 2992, -2224, 2992), PackedVector2Array(-2271, 2864, -2227, 2864, -2226, 2912, -2272, 2912), PackedVector2Array(-2400, 2784, -2272, 2785, -2272, 2992, -2400, 2992, -2400, 2945, -2367, 2944, -2303, 2944, -2303, 2896, -2369, 2896, -2369, 2880, -2305, 2880, -2305, 2833, -2369, 2832, -2367, 2944, -2400, 2945), PackedVector2Array(-2192, 2994, -2144, 2994, -2144, 3040, -2192, 3040), PackedVector2Array(-1792, 2560, -1792, 2704, -1632, 2704, -1632, 2560, -1696, 2560, -1696, 2624, -1680, 2624, -1680, 2656, -1696, 2656, -1696, 2672, -1728, 2672, -1728, 2655, -1744, 2655, -1744, 2624, -1728, 2624, -1728, 2608, -1696, 2608, -1696, 2560)])
+vertices = PackedVector2Array(-2260.3984, 3228.6016, -2283.6016, 3228.6016, -2283.6016, 3155.3984, -2260.3984, 3155.3984, -2021.3984, 3196.6016, -2075.6016, 3196.6016, -2075.6016, 3155.3984, -2021.3984, 3155.3984, -1685.3984, 3164.6016, -1772.5313, 3164.6016, -1771.6719, 3123.3984, -1685.3984, 3123.3984, -1635.3984, 2884.3672, -1635.3984, 2987.5234, -1675.6016, 2986.6719, -1675.6016, 2923.5625, -1765.6016, 2883.4219, -1765.6016, 2924.5625, -2229.4688, 2908.6016, -2268.5313, 2908.6016, -2267.6719, 2867.3984, -2230.3281, 2867.3984, -2147.3984, 2794.6016, -2188.6016, 2794.6016, -2188.6016, 2709.3984, -2147.3984, 2709.3984, -2014.5703, 2652.6016, -2058.6719, 2652.6016, -2059.5313, 2595.3984, -1796.3984, 2595.3984, -1963.6016, 2651.5313, -1796.3984, 2652.6016, -1907.3984, 2652.6016, -1963.6016, 2776.6016, -1907.3984, 2776.6016, -1356.6016, 2780.6016, -1411.3984, 2780.6016, -1404.6016, 2755.3984, -1331.3984, 2691.3984, -1331.3984, 2939.6094, -1355.5469, 2899.3828, -1356.6016, 2826.6875, -1379.3984, 2939.7969, -1507.3984, 2900.4219, -1436.6016, 2755.3984, -1436.6016, 2787.3984, -1411.3984, 2796.6016, -1428.3984, 2796.6016, -1404.6016, 2732.6016, -1580.6016, 2691.3984, -1555.3672, 2732.6016, -1580.6016, 2940.5781, -1556.4297, 2851.3984, -1492.6172, 2860.8125, -1491.6328, 2875.6016, -1507.3984, 2875.6016, -1516.7031, 2851.3984, -1379.3984, 2988.6563, -1420.6016, 2989.5234, -1420.6016, 2940.6016, -1460.3984, 2828.6016, -1484.6016, 2819.3984, -1484.6016, 2803.3984, -1467.6016, 2803.3984, -1443.3984, 2812.6016, -1443.3984, 2828.6016, -1467.6016, 2787.3984, -1428.3984, 2812.6016, -1460.3984, 2844.6016, -1475.3984, 2844.6016, -1421.6328, 2940.6016, -1421.6406, 2939.9688, -1515.7031, 2819.3984, -1475.3984, 2859.789, -1539.3984, 3235.3984, -1516.6016, 3235.3984, -1379.3984, 3244.6016, -1527.9766, 3244.6016, -1676.6016, 3243.6172, -1516.6016, 3091.3984, -1516.6016, 3004.6016, -1379.3984, 2996.3984, -1676.6016, 2996.3984, -1539.3984, 3004.6016, -1539.3984, 3132.6016, -1539.3984, 3091.3984, -1516.6016, 3132.6016, -1635.3984, 2563.3984, -1635.3984, 2700.6016, -1676.6016, 2659.3984, -1676.6016, 2620.6016, -1692.6016, 2620.6016, -1692.6016, 2604.6016, -1788.6016, 2563.3984, -1731.3984, 2604.6016, -1731.3984, 2620.6016, -1747.3984, 2620.6016, -1788.6016, 2700.6016, -1747.3984, 2659.3984, -1731.3984, 2659.3984, -1731.3984, 2675.3984, -1692.6016, 2675.3984, -1692.6016, 2659.3984, -1923.3984, 3171.3984, -1867.5313, 3171.3984, -1780.3984, 3244.6016, -1919.9609, 3244.6016, -2011.6094, 3243.6328, -1780.3984, 3043.3984, -1868.6719, 3116.6016, -2012.5781, 3043.3984, -1923.3984, 3116.6016, -2060.6016, 2987.6016, -1980.6016, 2915.3984, -1843.3984, 2899.3984, -1804.6016, 2899.3984, -1779.3984, 2987.6016, -1779.3984, 2788.3594, -1804.6016, 2860.6016, -1884.6016, 2883.3984, -1923.3984, 2883.3984, -1923.3984, 2828.6016, -1980.6016, 2876.6016, -1964.6016, 2787.3984, -1843.3984, 2860.6016, -1884.6016, 2828.6016, -1872.3828, 2787.3984, -1907.3984, 2787.3984, -2019.3984, 2915.3984, -2060.6016, 2787.3984, -2019.3984, 2876.6016, -1907.3984, 2787.0234, -1964.6016, 2786.4297, -2124.6016, 2675.3984, -2067.4297, 2700.6016, -2268.6016, 2700.6016, -2211.3984, 2675.3984, -2068.3828, 2563.3984, -2124.6016, 2588.6016, -2268.6016, 2563.3984, -2211.3984, 2588.6016, -2140.6016, 2883.3984, -2140.6016, 2860.6016, -2116.3828, 2804.3984, -2115.4219, 2988.6016, -2140.6016, 2931.3984, -2220.6016, 2988.6016, -2195.3984, 2931.3984, -2220.6016, 2804.3984, -2195.3984, 2908.6016, -2156.6016, 2860.6016, -2156.6016, 2844.6016, -2179.3984, 2844.6016, -2179.3984, 2860.6016, -2195.3984, 2860.6016, -2195.3984, 2883.3984, -2140.6016, 2908.6016, -2083.3984, 3244.6016, -2251.6719, 3244.6016, -2188.6016, 3203.3984, -2124.6016, 3171.3984, -2108.6016, 3107.3984, -2108.6016, 3068.6016, -2083.3984, 3043.3984, -2124.6016, 3148.6016, -2227.3984, 3203.3984, -2227.3984, 3164.6016, -2252.9375, 3155.3984, -2252.6016, 3155.3984, -2179.3984, 3171.3984, -2188.6016, 3180.6016, -2147.3984, 3043.3984, -2147.3984, 3068.6016, -2147.3984, 3107.3984, -2140.6016, 3132.6016, -2163.3984, 3132.6016, -2172.6016, 3107.3984, -2172.6016, 3084.6016, -2188.6016, 3084.6016, -2188.6016, 3068.6016, -2227.3984, 3091.3984, -2211.3984, 3091.3984, -2211.3984, 3107.3984, -2140.6016, 3148.6016, -2163.3984, 3148.6016, -2179.3984, 3148.6016, -2204.6016, 3180.6016, -2204.6016, 3164.6016, -2188.6016, 3043.3984, -2188.6016, 2997.3984, -2147.3984, 2997.3984, -2227.3984, 3068.6016, -2252.6016, 3043.3984, -2300.6016, 2883.3984, -2300.6016, 2828.6016, -2275.3984, 2788.3672, -2275.3984, 2988.6016, -2299.5313, 2947.3984, -2300.6719, 2892.6016, -2396.6016, 2787.4219, -2368.9375, 2828.6016, -2372.461, 2828.5313, -2371.3984, 2947.3984, -2396.6016, 2988.6016, -2371.4766, 2883.3984, -2371.3984, 2892.6016, -2291.3984, 3123.3984, -2291.3984, 3244.5625, -2300.6016, 3219.3984, -2300.6016, 3164.6016, -2323.3984, 3164.6016, -2323.3984, 3219.3984, -2348.6016, 3203.3984, -2348.6016, 3148.6016, -2396.6016, 3243.6328, -2371.3984, 3203.3984, -2396.6016, 3123.3984, -2371.3984, 3148.6016)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(8, 9, 10, 11), PackedInt32Array(12, 13, 14, 15), PackedInt32Array(16, 12, 15, 17), PackedInt32Array(18, 19, 20, 21), PackedInt32Array(22, 23, 24, 25), PackedInt32Array(26, 27, 28, 29, 30), PackedInt32Array(30, 29, 31, 32), PackedInt32Array(33, 30, 32, 34), PackedInt32Array(35, 36, 37, 38), PackedInt32Array(38, 39, 40, 41, 35), PackedInt32Array(40, 39, 42, 43), PackedInt32Array(44, 37, 36, 45), PackedInt32Array(45, 36, 46, 47), PackedInt32Array(38, 37, 48), PackedInt32Array(49, 38, 48, 50), PackedInt32Array(51, 49, 50, 52), PackedInt32Array(53, 54, 55, 56), PackedInt32Array(57, 58, 59, 42), PackedInt32Array(60, 61, 62, 63, 64, 65), PackedInt32Array(64, 63, 66, 45, 47, 67), PackedInt32Array(60, 68, 69, 61), PackedInt32Array(59, 70, 71, 42), PackedInt32Array(53, 56, 72, 61, 69, 73), PackedInt32Array(51, 52, 56, 55, 43), PackedInt32Array(71, 51, 43, 42), PackedInt32Array(74, 75, 76, 77, 78), PackedInt32Array(79, 80, 81, 76), PackedInt32Array(82, 81, 80, 83), PackedInt32Array(74, 78, 82, 84), PackedInt32Array(82, 83, 85), PackedInt32Array(84, 82, 85, 86), PackedInt32Array(86, 85, 79, 76), PackedInt32Array(86, 76, 75), PackedInt32Array(87, 88, 89, 90), PackedInt32Array(90, 91, 92, 87), PackedInt32Array(93, 87, 92, 94), PackedInt32Array(94, 95, 96, 93), PackedInt32Array(97, 93, 96, 98), PackedInt32Array(98, 99, 100, 97), PackedInt32Array(88, 97, 100, 101), PackedInt32Array(89, 88, 101, 102), PackedInt32Array(103, 104, 105, 106, 107), PackedInt32Array(108, 105, 104, 109), PackedInt32Array(110, 108, 109, 111), PackedInt32Array(107, 110, 111, 103), PackedInt32Array(112, 113, 114, 115, 116), PackedInt32Array(117, 116, 115, 118), PackedInt32Array(119, 114, 113, 120), PackedInt32Array(121, 120, 113, 122, 123), PackedInt32Array(124, 114, 119, 125, 126), PackedInt32Array(126, 117, 118, 124), PackedInt32Array(127, 126, 125, 121), PackedInt32Array(128, 113, 112), PackedInt32Array(128, 112, 129, 130), PackedInt32Array(130, 129, 123, 122), PackedInt32Array(131, 127, 121, 123, 132), PackedInt32Array(133, 134, 135, 136), PackedInt32Array(137, 134, 133, 138), PackedInt32Array(139, 137, 138, 140), PackedInt32Array(136, 135, 139, 140), PackedInt32Array(141, 142, 143, 144), PackedInt32Array(145, 144, 146, 147), PackedInt32Array(147, 146, 148, 149), PackedInt32Array(142, 150, 151, 143), PackedInt32Array(148, 143, 151, 152), PackedInt32Array(152, 153, 154, 148), PackedInt32Array(148, 154, 155), PackedInt32Array(149, 148, 155), PackedInt32Array(156, 149, 155, 141), PackedInt32Array(156, 141, 144), PackedInt32Array(156, 144, 145), PackedInt32Array(157, 158, 159, 160), PackedInt32Array(161, 162, 163, 157), PackedInt32Array(161, 157, 160, 164), PackedInt32Array(165, 159, 158), PackedInt32Array(166, 165, 158, 167, 168), PackedInt32Array(169, 160, 159, 170), PackedInt32Array(171, 163, 162, 172), PackedInt32Array(173, 161, 164, 174), PackedInt32Array(172, 173, 175, 176, 177), PackedInt32Array(177, 178, 179), PackedInt32Array(168, 180, 181, 182, 166), PackedInt32Array(164, 183, 174), PackedInt32Array(173, 174, 175), PackedInt32Array(176, 175, 184, 185, 182), PackedInt32Array(169, 170, 186, 187, 185), PackedInt32Array(188, 189, 190, 171), PackedInt32Array(188, 171, 172, 177, 179), PackedInt32Array(188, 179, 191, 192), PackedInt32Array(168, 192, 191, 180), PackedInt32Array(187, 166, 182, 185), PackedInt32Array(193, 194, 195, 196, 197), PackedInt32Array(193, 197, 198), PackedInt32Array(199, 195, 194, 200, 201), PackedInt32Array(202, 203, 199, 201, 204, 205), PackedInt32Array(197, 196, 203, 202), PackedInt32Array(205, 204, 193, 198), PackedInt32Array(206, 207, 208, 209), PackedInt32Array(210, 211, 212, 213), PackedInt32Array(208, 207, 214, 211), PackedInt32Array(212, 211, 214, 215), PackedInt32Array(215, 214, 216, 217), PackedInt32Array(217, 216, 206, 213), PackedInt32Array(213, 206, 209, 210)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-2400, 3120, -2288, 3120, -2288, 3248, -2400, 3247, -2400, 3247), PackedVector2Array(-2287, 3152, -2287, 3232, -2257, 3232, -2257, 3152), PackedVector2Array(-2258, 3040, -2255, 3249, -2080, 3249, -2080, 3040), PackedVector2Array(-2079, 3151, -2079, 3201, -2018, 3200, -2018, 3152), PackedVector2Array(-1920, 3120, -1872, 3120, -1871, 3168, -1920, 3168, -1920, 3248, -1777, 3248, -1777, 3040, -2016, 3040, -2015, 3247, -1920, 3248), PackedVector2Array(-1776, 3168, -1775, 3120, -1682, 3120, -1682, 3168), PackedVector2Array(-1680, 3247, -1680, 2993, -1376, 2993, -1376, 3249), PackedVector2Array(-1424, 2993, -1376, 2992, -1376, 2943, -1425, 2943), PackedVector2Array(-1584, 2944, -1328, 2943, -1328, 2688, -1362, 2688, -1359, 2896, -1504, 2897, -1504, 2879, -1488, 2879, -1489, 2864, -1472, 2863, -1472, 2848, -1457, 2848, -1457, 2832, -1440, 2832, -1440, 2816, -1425, 2816, -1425, 2800, -1408, 2800, -1408, 2784, -1360, 2784, -1362, 2688, -1585, 2688, -1585, 2736, -1408, 2736, -1408, 2750, -1440, 2751, -1440, 2784, -1471, 2784, -1471, 2800, -1488, 2800, -1488, 2816, -1519, 2816, -1520, 2848, -1553, 2848, -1552, 2736, -1585, 2736), PackedVector2Array(-1769, 2928, -1679, 2927, -1679, 2990, -1632, 2991, -1632, 2881, -1769, 2880), PackedVector2Array(-2065, 2782, -1776, 2785, -1776, 2991, -2065, 2991), PackedVector2Array(-1967, 2780, -1967, 2655, -2062, 2657, -2063, 2591, -1793, 2591, -1793, 2656, -1904, 2657, -1904, 2780), PackedVector2Array(-2272, 2560, -2065, 2560, -2064, 2705, -2128, 2705, -2128, 2592, -2208, 2592, -2208, 2672, -2128, 2672, -2127, 2704, -2272, 2704), PackedVector2Array(-2192, 2706, -2144, 2706, -2144, 2798, -2192, 2798), PackedVector2Array(-2224, 2801, -2113, 2801, -2112, 2992, -2224, 2992), PackedVector2Array(-2271, 2864, -2227, 2864, -2226, 2912, -2272, 2912), PackedVector2Array(-2400, 2784, -2272, 2785, -2272, 2992, -2400, 2992, -2400, 2945, -2367, 2944, -2303, 2944, -2304, 2896, -2369, 2896, -2369, 2880, -2305, 2880, -2305, 2833, -2369, 2832, -2367, 2944, -2400, 2945), PackedVector2Array(-2192, 2994, -2144, 2994, -2144, 3040, -2192, 3040), PackedVector2Array(-1792, 2560, -1792, 2704, -1632, 2704, -1632, 2560, -1696, 2560, -1696, 2624, -1680, 2624, -1680, 2656, -1696, 2656, -1696, 2672, -1728, 2672, -1728, 2655, -1744, 2655, -1744, 2624, -1728, 2624, -1728, 2608, -1696, 2608, -1696, 2560)])
 parsed_geometry_type = 1
 agent_radius = 3.4
 
@@ -3234,9 +3233,8 @@ texture = ExtResource("2_l3i6u")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_47w8y")
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_x241o"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_2jlo3"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x241o"]
+size = Vector2(5.2901344, 58.98831)
 
 [node name="Principal" type="Node2D" node_paths=PackedStringArray("region_representation_node")]
 script = ExtResource("1_nv0ic")
@@ -3270,10 +3268,9 @@ zoom = Vector2(1.685, 1.685)
 z_index = 1145
 script = ExtResource("4_ak72r")
 
-[node name="Habitacion_10" type="Node2D" parent="RegionRepresentation" node_paths=PackedStringArray("portales_asignados")]
+[node name="Habitacion_10" type="Node2D" parent="RegionRepresentation"]
 script = ExtResource("6_dknxi")
 neighbors = Array[NodePath]([NodePath("../Habitacion_09"), NodePath("../Habitacion_06")])
-portales_asignados = [NodePath("../../Portales habitacion 10/Portal_Salida10 con pasillo6y8")]
 
 [node name="Polygon2D" type="Polygon2D" parent="RegionRepresentation/Habitacion_10"]
 color = Color(1, 0.3019608, 0.14901961, 0.5921569)
@@ -3295,43 +3292,31 @@ navigation_region = NodePath("../../../NavigationRegion2D")
 
 [node name="Marker2D" type="Marker2D" parent="RegionRepresentation/Habitacion_10/Waypoints"]
 position = Vector2(-1768, 2637)
-script = ExtResource("10_sr51t")
 
 [node name="Marker2D2" type="Marker2D" parent="RegionRepresentation/Habitacion_10/Waypoints"]
 position = Vector2(-1746, 2605)
-script = ExtResource("10_sr51t")
 
 [node name="Marker2D3" type="Marker2D" parent="RegionRepresentation/Habitacion_10/Waypoints"]
 position = Vector2(-1710, 2579)
-script = ExtResource("10_sr51t")
-
-[node name="Marker2D8" type="Marker2D" parent="RegionRepresentation/Habitacion_10/Waypoints"]
-position = Vector2(-1669, 2600)
-script = ExtResource("10_sr51t")
-es_iluminado = false
 
 [node name="Marker2D4" type="Marker2D" parent="RegionRepresentation/Habitacion_10/Waypoints"]
 position = Vector2(-1651, 2636)
-script = ExtResource("10_sr51t")
-es_iluminado = false
 
 [node name="Marker2D5" type="Marker2D" parent="RegionRepresentation/Habitacion_10/Waypoints"]
-position = Vector2(-1671, 2674)
-script = ExtResource("10_sr51t")
-es_iluminado = false
+position = Vector2(-1670, 2675)
 
 [node name="Marker2D6" type="Marker2D" parent="RegionRepresentation/Habitacion_10/Waypoints"]
 position = Vector2(-1708, 2688)
-script = ExtResource("10_sr51t")
 
 [node name="Marker2D7" type="Marker2D" parent="RegionRepresentation/Habitacion_10/Waypoints"]
 position = Vector2(-1753, 2677)
-script = ExtResource("10_sr51t")
 
-[node name="Habitacion_09" type="Node2D" parent="RegionRepresentation" node_paths=PackedStringArray("portales_asignados")]
+[node name="Marker2D8" type="Marker2D" parent="RegionRepresentation/Habitacion_10/Waypoints"]
+position = Vector2(-1669, 2600)
+
+[node name="Habitacion_09" type="Node2D" parent="RegionRepresentation"]
 script = ExtResource("6_dknxi")
 neighbors = Array[NodePath]([NodePath("../Habitacion_07"), NodePath("../Habitacion_06"), NodePath("../Habitacion_10")])
-portales_asignados = [NodePath("../../Portales habitacion 9/Portal_Salida9 con pasillo7"), NodePath("../../Portales habitacion 9/Portal_Salida9 con pasillo6y10")]
 
 [node name="Polygon2D" type="Polygon2D" parent="RegionRepresentation/Habitacion_09"]
 color = Color(1, 1, 1, 0.69411767)
@@ -3363,10 +3348,9 @@ position = Vector2(-2166, 2688)
 [node name="Marker2D4" type="Marker2D" parent="RegionRepresentation/Habitacion_09/Waypoints"]
 position = Vector2(-2093, 2635)
 
-[node name="Habitacion_08" type="Node2D" parent="RegionRepresentation" node_paths=PackedStringArray("portales_asignados")]
+[node name="Habitacion_08" type="Node2D" parent="RegionRepresentation"]
 script = ExtResource("6_dknxi")
 neighbors = Array[NodePath]([NodePath("../Habitacion_07")])
-portales_asignados = [NodePath("../../Portales habitacion 8/Portal_Salida8 con pasillo7")]
 
 [node name="Polygon2D" type="Polygon2D" parent="RegionRepresentation/Habitacion_08"]
 color = Color(0, 0.5647059, 0.2627451, 0.5372549)
@@ -3398,18 +3382,13 @@ position = Vector2(-2389, 2886)
 [node name="Marker2D4" type="Marker2D" parent="RegionRepresentation/Habitacion_08/Waypoints"]
 position = Vector2(-2334, 2804)
 
-[node name="Marker2D6" type="Marker2D" parent="RegionRepresentation/Habitacion_08/Waypoints"]
+[node name="Marker2D5" type="Marker2D" parent="RegionRepresentation/Habitacion_08/Waypoints"]
 z_index = 4000
 position = Vector2(-2333, 2978)
 
-[node name="Marker2D5" type="Marker2D" parent="RegionRepresentation/Habitacion_08/Waypoints"]
-z_index = 4000
-position = Vector2(-2291, 2946)
-
-[node name="Habitacion_07" type="Node2D" parent="RegionRepresentation" node_paths=PackedStringArray("portales_asignados")]
+[node name="Habitacion_07" type="Node2D" parent="RegionRepresentation"]
 script = ExtResource("6_dknxi")
 neighbors = Array[NodePath]([NodePath("../Habitacion_02"), NodePath("../Habitacion_08"), NodePath("../Habitacion_09")])
-portales_asignados = [NodePath("../../Portales habitacion 7/Portal_Salida7 con pasillo2"), NodePath("../../Portales habitacion 7/Portal_Salida7 con pasillo8"), NodePath("../../Portales habitacion 7/Portal_Salida7 con pasillo9")]
 
 [node name="Polygon2D" type="Polygon2D" parent="RegionRepresentation/Habitacion_07"]
 color = Color(0.53333336, 0.52156866, 0.09019608, 0.6)
@@ -3464,10 +3443,9 @@ position = Vector2(-2169, 2822)
 [node name="Marker2D11" type="Marker2D" parent="RegionRepresentation/Habitacion_07/Waypoints"]
 position = Vector2(-2137, 2839)
 
-[node name="Habitacion_06" type="Node2D" parent="RegionRepresentation" node_paths=PackedStringArray("portales_asignados")]
+[node name="Habitacion_06" type="Node2D" parent="RegionRepresentation"]
 script = ExtResource("6_dknxi")
 neighbors = Array[NodePath]([NodePath("../Pasillo_4con6"), NodePath("../Habitacion_09"), NodePath("../Habitacion_10")])
-portales_asignados = [NodePath("../../Portales habitacion 6/Portal_Salida4 con pasillo6"), NodePath("../../Portales habitacion 6/Portal_Salida6 con pasillo9y10")]
 
 [node name="Waypoints" type="Node2D" parent="RegionRepresentation/Habitacion_06" node_paths=PackedStringArray("navigation_region")]
 script = ExtResource("6_obo3n")
@@ -3475,58 +3453,38 @@ navigation_region = NodePath("../../../NavigationRegion2D")
 
 [node name="Marker2D" type="Marker2D" parent="RegionRepresentation/Habitacion_06/Waypoints"]
 position = Vector2(-1906, 2897)
-script = ExtResource("10_sr51t")
 
 [node name="Marker2D2" type="Marker2D" parent="RegionRepresentation/Habitacion_06/Waypoints"]
 position = Vector2(-1949, 2859)
-script = ExtResource("10_sr51t")
-es_iluminado = false
-es_punto_alto = true
 
 [node name="Marker2D3" type="Marker2D" parent="RegionRepresentation/Habitacion_06/Waypoints"]
 position = Vector2(-1864, 2859)
-script = ExtResource("10_sr51t")
 
 [node name="Marker2D4" type="Marker2D" parent="RegionRepresentation/Habitacion_06/Waypoints"]
 position = Vector2(-1894, 2953)
-script = ExtResource("10_sr51t")
 
 [node name="Marker2D5" type="Marker2D" parent="RegionRepresentation/Habitacion_06/Waypoints"]
 z_index = 4000
 position = Vector2(-2017, 2934)
-script = ExtResource("10_sr51t")
 
 [node name="Marker2D6" type="Marker2D" parent="RegionRepresentation/Habitacion_06/Waypoints"]
 z_index = 4096
-position = Vector2(-1789, 2882)
-script = ExtResource("10_sr51t")
-es_iluminado = false
-es_punto_alto = true
+position = Vector2(-1792, 2896)
 
 [node name="Marker2D7" type="Marker2D" parent="RegionRepresentation/Habitacion_06/Waypoints"]
 position = Vector2(-2042, 2897)
-script = ExtResource("10_sr51t")
 
 [node name="Marker2D8" type="Marker2D" parent="RegionRepresentation/Habitacion_06/Waypoints"]
 position = Vector2(-2001, 2828)
-script = ExtResource("10_sr51t")
 
 [node name="Marker2D9" type="Marker2D" parent="RegionRepresentation/Habitacion_06/Waypoints"]
 position = Vector2(-1929, 2799)
-script = ExtResource("10_sr51t")
-es_iluminado = false
-es_punto_alto = true
 
 [node name="Marker2D10" type="Marker2D" parent="RegionRepresentation/Habitacion_06/Waypoints"]
 position = Vector2(-1894, 2810)
-script = ExtResource("10_sr51t")
-es_iluminado = false
-es_punto_alto = true
 
 [node name="Marker2D11" type="Marker2D" parent="RegionRepresentation/Habitacion_06/Waypoints"]
-z_index = 4096
-position = Vector2(-1822, 2829)
-script = ExtResource("10_sr51t")
+position = Vector2(-1821, 2823)
 
 [node name="Polygon2D" type="Polygon2D" parent="RegionRepresentation/Habitacion_06"]
 color = Color(1, 0.83137256, 0.85882354, 0.6509804)
@@ -3544,10 +3502,9 @@ position = Vector2(15.560268, 590.3984)
 scale = Vector2(1.0086205, 0.7927903)
 polygon = PackedVector2Array(-2066, 2767, -1776, 2766, -1776, 3031.9634, -2064, 3031.9634)
 
-[node name="Habitacion_05" type="Node2D" parent="RegionRepresentation" node_paths=PackedStringArray("portales_asignados")]
+[node name="Habitacion_05" type="Node2D" parent="RegionRepresentation"]
 script = ExtResource("6_dknxi")
 neighbors = Array[NodePath]([NodePath("../Habitacion_04")])
-portales_asignados = [NodePath("../../Portales habitacion 5/Portal_Salida5 con pasillo4")]
 
 [node name="Polygon2D" type="Polygon2D" parent="RegionRepresentation/Habitacion_05"]
 color = Color(0, 0.050980393, 0.64705884, 0.50980395)
@@ -3615,10 +3572,9 @@ position = Vector2(-1423, 2770)
 [node name="Marker2D14" type="Marker2D" parent="RegionRepresentation/Habitacion_05/Waypoints"]
 position = Vector2(-1460, 2816)
 
-[node name="Habitacion_04" type="Node2D" parent="RegionRepresentation" node_paths=PackedStringArray("portales_asignados")]
+[node name="Habitacion_04" type="Node2D" parent="RegionRepresentation"]
 script = ExtResource("6_dknxi")
 neighbors = Array[NodePath]([NodePath("../Habitacion_03"), NodePath("../Habitacion_05"), NodePath("../Habitacion_06")])
-portales_asignados = [NodePath("../../Portales habitacion 4/Portal_Salida4 con pasillo5"), NodePath("../../Portales habitacion 4/Portal_Salida4 con pasillo6"), NodePath("../../Portales habitacion 4/Portal_Salida4 con pasillo2")]
 
 [node name="Polygon2D" type="Polygon2D" parent="RegionRepresentation/Habitacion_04"]
 color = Color(0.9529412, 0.47058824, 0.21960784, 0.5568628)
@@ -3664,10 +3620,9 @@ position = Vector2(-1570, 3030)
 [node name="Marker2D7" type="Marker2D" parent="RegionRepresentation/Habitacion_04/Waypoints"]
 position = Vector2(-1527, 3000)
 
-[node name="Habitacion_03" type="Node2D" parent="RegionRepresentation" node_paths=PackedStringArray("portales_asignados")]
+[node name="Habitacion_03" type="Node2D" parent="RegionRepresentation"]
 script = ExtResource("6_dknxi")
 neighbors = Array[NodePath]([NodePath("../Habitacion_02"), NodePath("../Habitacion_04")])
-portales_asignados = [NodePath("../../Portales habitacion 3/Portal_Salida3 con pasillo4"), NodePath("../../Portales habitacion 3/Portal_Salida3 con pasillo2")]
 
 [node name="Polygon2D" type="Polygon2D" parent="RegionRepresentation/Habitacion_03"]
 color = Color(1, 0.3882353, 1, 0.5372549)
@@ -3699,10 +3654,9 @@ position = Vector2(-1970, 3148)
 [node name="Marker2D4" type="Marker2D" parent="RegionRepresentation/Habitacion_03/Waypoints"]
 position = Vector2(-1895, 3216)
 
-[node name="Habitacion_02" type="Node2D" parent="RegionRepresentation" node_paths=PackedStringArray("portales_asignados")]
+[node name="Habitacion_02" type="Node2D" parent="RegionRepresentation"]
 script = ExtResource("6_dknxi")
 neighbors = Array[NodePath]([NodePath("../Habitacion_01"), NodePath("../Habitacion_07")])
-portales_asignados = [NodePath("../../Portales habitacion 2/Portal_Salida2 con pasillo7"), NodePath("../../Portales habitacion 2/Portal_Salida2 con pasillo1"), NodePath("../../Portales habitacion 2/Portal_Salida2 con pasillo3")]
 
 [node name="Polygon2D" type="Polygon2D" parent="RegionRepresentation/Habitacion_02"]
 color = Color(1, 1, 0.23921569, 0.62352943)
@@ -3763,6 +3717,9 @@ position = Vector2(-2235, 3069)
 [node name="Marker2D15" type="Marker2D" parent="RegionRepresentation/Habitacion_02/Waypoints"]
 position = Vector2(-2166, 3058)
 
+[node name="Marker2D14" type="Marker2D" parent="RegionRepresentation/Habitacion_02/Waypoints"]
+position = Vector2(-2216, 3098)
+
 [node name="Marker2D13" type="Marker2D" parent="RegionRepresentation/Habitacion_02/Waypoints"]
 position = Vector2(-2209, 3055)
 
@@ -3781,11 +3738,9 @@ position = Vector2(-2127, 3122)
 [node name="Marker2D12" type="Marker2D" parent="RegionRepresentation/Habitacion_02/Waypoints"]
 position = Vector2(-2091, 3109)
 
-[node name="Habitacion_01" type="Node2D" parent="RegionRepresentation" node_paths=PackedStringArray("portales_asignados")]
-position = Vector2(0, -1)
+[node name="Habitacion_01" type="Node2D" parent="RegionRepresentation"]
 script = ExtResource("6_dknxi")
 neighbors = Array[NodePath]([NodePath("../Habitacion_02")])
-portales_asignados = [NodePath("../../Portales habitacion 1/Portal_Salida1 con pasillo2")]
 
 [node name="Polygon2D" type="Polygon2D" parent="RegionRepresentation/Habitacion_01"]
 color = Color(0.9490196, 0.13725491, 0.22745098, 0.7411765)
@@ -4078,7 +4033,7 @@ color = Color(0.9490196, 0.13725491, 0.22745098, 0.7411765)
 polygon = PackedVector2Array(-2400, 3118, -2288, 3120, -2286, 3249, -2343.4197, 3249, -2400, 3249.0005)
 
 [node name="Marker2D" type="Marker2D" parent="RegionRepresentation/Pasillo_1con2"]
-position = Vector2(-2270, 3196)
+position = Vector2(-4540, 6382)
 
 [node name="RoomSensor" type="Area2D" parent="RegionRepresentation/Pasillo_1con2"]
 script = ExtResource("6_4ru81")
@@ -4092,7 +4047,6 @@ polygon = PackedVector2Array(-2399, 3119, -2288, 3120, -2286, 3249, -2400, 3249)
 [node name="Waypoints" type="Node2D" parent="RegionRepresentation/Pasillo_1con2" node_paths=PackedStringArray("navigation_region")]
 script = ExtResource("6_obo3n")
 navigation_region = NodePath("../../../NavigationRegion2D")
-factor_curvatura = 1.0
 
 [node name="Marker2D" type="Marker2D" parent="RegionRepresentation/Pasillo_1con2/Waypoints"]
 position = Vector2(-2270, 3191)
@@ -4124,292 +4078,89 @@ player = NodePath("../../CharacterBody2D")
 region_graph = NodePath("../../RegionRepresentation")
 assigned_room_node_path = NodePath("../../RegionRepresentation/Habitacion_05")
 
-[node name="Portales habitacion 1" type="Node2D" parent="."]
-
-[node name="Portal_Salida1 con pasillo2" type="Area2D" parent="Portales habitacion 1" node_paths=PackedStringArray("destino")]
+[node name="Portal_Salida9Y10 con H6" type="Area2D" parent="." node_paths=PackedStringArray("destino")]
 z_index = 4096
 script = ExtResource("15_x241o")
-destino = NodePath("Destino_Pasillo2")
+destino = NodePath("Destino_H6")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Portales habitacion 1/Portal_Salida1 con pasillo2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal_Salida9Y10 con H6"]
 z_index = 4096
-position = Vector2(-2293.0002, 3189)
-rotation = 3.1398873
-shape = SubResource("CircleShape2D_x241o")
+position = Vector2(-1935, 2771)
+rotation = -1.5708362
+shape = SubResource("RectangleShape2D_x241o")
 
-[node name="Destino_Pasillo2" type="Marker2D" parent="Portales habitacion 1/Portal_Salida1 con pasillo2"]
-position = Vector2(-2270, 3192)
+[node name="Destino_H6" type="Marker2D" parent="Portal_Salida9Y10 con H6"]
+position = Vector2(-1929, 2799)
 
-[node name="Portales habitacion 2" type="Node2D" parent="."]
-
-[node name="Portal_Salida2 con pasillo7" type="Area2D" parent="Portales habitacion 2" node_paths=PackedStringArray("destino")]
+[node name="Portal_Salida6 con pasillo9y10" type="Area2D" parent="." node_paths=PackedStringArray("destino")]
 z_index = 4096
 script = ExtResource("15_x241o")
-destino = NodePath("Destino_Pasillo7")
+destino = NodePath("Destino_Pasillo9y10")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Portales habitacion 2/Portal_Salida2 con pasillo7"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal_Salida6 con pasillo9y10"]
 z_index = 4096
-position = Vector2(-2166, 3058)
-rotation = 3.1398873
-shape = SubResource("CircleShape2D_x241o")
+position = Vector2(-1934.0001, 2787.355)
+rotation = -1.5708362
+shape = SubResource("RectangleShape2D_x241o")
 
-[node name="Destino_Pasillo7" type="Marker2D" parent="Portales habitacion 2/Portal_Salida2 con pasillo7"]
-position = Vector2(-2168, 3018)
+[node name="Destino_Pasillo9y10" type="Marker2D" parent="Portal_Salida6 con pasillo9y10"]
+position = Vector2(-1935, 2708)
 
-[node name="Portal_Salida2 con pasillo1" type="Area2D" parent="Portales habitacion 2" node_paths=PackedStringArray("destino")]
-z_index = 4096
-script = ExtResource("15_x241o")
-destino = NodePath("Destino_Pasillo1")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Portales habitacion 2/Portal_Salida2 con pasillo1"]
-z_index = 4096
-position = Vector2(-2240, 3181)
-rotation = 3.1398873
-shape = SubResource("CircleShape2D_x241o")
-
-[node name="Destino_Pasillo1" type="Marker2D" parent="Portales habitacion 2/Portal_Salida2 con pasillo1"]
-position = Vector2(-2270, 3191)
-
-[node name="Portal_Salida2 con pasillo3" type="Area2D" parent="Portales habitacion 2" node_paths=PackedStringArray("destino")]
-z_index = 4096
-script = ExtResource("15_x241o")
-destino = NodePath("Destino_Pasillo3")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Portales habitacion 2/Portal_Salida2 con pasillo3"]
-z_index = 4096
-position = Vector2(-2091.0002, 3109.0002)
-rotation = 3.1398873
-shape = SubResource("CircleShape2D_x241o")
-
-[node name="Destino_Pasillo3" type="Marker2D" parent="Portales habitacion 2/Portal_Salida2 con pasillo3"]
-position = Vector2(-2047, 3176)
-
-[node name="Portales habitacion 3" type="Node2D" parent="."]
-
-[node name="Portal_Salida3 con pasillo4" type="Area2D" parent="Portales habitacion 3" node_paths=PackedStringArray("destino")]
+[node name="Portal_Salida6 con pasillo4" type="Area2D" parent="." node_paths=PackedStringArray("destino")]
 z_index = 4096
 script = ExtResource("15_x241o")
 destino = NodePath("Destino_Pasillo4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Portales habitacion 3/Portal_Salida3 con pasillo4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal_Salida6 con pasillo4"]
 z_index = 4096
-position = Vector2(-1810, 3144.0002)
-rotation = 3.1398873
-shape = SubResource("CircleShape2D_x241o")
+position = Vector2(-1653, 3000)
+rotation = -1.5708362
+shape = SubResource("RectangleShape2D_x241o")
 
-[node name="Destino_Pasillo4" type="Marker2D" parent="Portales habitacion 3/Portal_Salida3 con pasillo4"]
-position = Vector2(-1729, 3143)
+[node name="Destino_Pasillo4" type="Marker2D" parent="Portal_Salida6 con pasillo4"]
+position = Vector2(-1650, 2943)
 
-[node name="Portal_Salida3 con pasillo2" type="Area2D" parent="Portales habitacion 3" node_paths=PackedStringArray("destino")]
+[node name="Portal_Salida4 con pasillo6" type="Area2D" parent="." node_paths=PackedStringArray("destino")]
 z_index = 4096
 script = ExtResource("15_x241o")
-destino = NodePath("Destino_Pasillo3")
+destino = NodePath("Destino_Pasillo6")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Portales habitacion 3/Portal_Salida3 con pasillo2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal_Salida4 con pasillo6"]
 z_index = 4096
-position = Vector2(-1970.0002, 3149.0002)
+position = Vector2(-1781.8743, 2902.0132)
 rotation = 3.1398873
-shape = SubResource("CircleShape2D_x241o")
+shape = SubResource("RectangleShape2D_x241o")
 
-[node name="Destino_Pasillo3" type="Marker2D" parent="Portales habitacion 3/Portal_Salida3 con pasillo2"]
-position = Vector2(-2048, 3176)
+[node name="Destino_Pasillo6" type="Marker2D" parent="Portal_Salida4 con pasillo6"]
+position = Vector2(-1704, 2896)
 
-[node name="Portales habitacion 4" type="Node2D" parent="."]
-
-[node name="Portal_Salida4 con pasillo5" type="Area2D" parent="Portales habitacion 4" node_paths=PackedStringArray("destino")]
+[node name="Portal_Salida5 con pasillo5" type="Area2D" parent="." node_paths=PackedStringArray("destino")]
 z_index = 4096
 script = ExtResource("15_x241o")
 destino = NodePath("Destino_Pasillo5")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Portales habitacion 4/Portal_Salida4 con pasillo5"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal_Salida5 con pasillo5"]
 z_index = 4096
-position = Vector2(-1429.0002, 3072)
-rotation = 3.1398873
-shape = SubResource("CircleShape2D_x241o")
+position = Vector2(-1400.0519, 2942.7266)
+rotation = -1.5517801
+shape = SubResource("RectangleShape2D_x241o")
 
-[node name="Destino_Pasillo5" type="Marker2D" parent="Portales habitacion 4/Portal_Salida4 con pasillo5"]
+[node name="Destino_Pasillo5" type="Marker2D" parent="Portal_Salida5 con pasillo5"]
 position = Vector2(-1399, 2967)
 
-[node name="Portal_Salida4 con pasillo6" type="Area2D" parent="Portales habitacion 4" node_paths=PackedStringArray("destino")]
+[node name="Portal_Salida4 con pasillo5" type="Area2D" parent="." node_paths=PackedStringArray("destino")]
 z_index = 4096
 script = ExtResource("15_x241o")
-destino = NodePath("Destino_Pasillo6")
+destino = NodePath("Destino_Pasillo5")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Portales habitacion 4/Portal_Salida4 con pasillo6"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal_Salida4 con pasillo5"]
 z_index = 4096
-position = Vector2(-1570.0001, 3030.0002)
-rotation = 3.1398873
-shape = SubResource("CircleShape2D_x241o")
+position = Vector2(-1400, 2996.0002)
+rotation = 4.7314053
+shape = SubResource("RectangleShape2D_x241o")
 
-[node name="Destino_Pasillo6" type="Marker2D" parent="Portales habitacion 4/Portal_Salida4 con pasillo6"]
-position = Vector2(-1649, 2943)
-
-[node name="Portal_Salida4 con pasillo2" type="Area2D" parent="Portales habitacion 4" node_paths=PackedStringArray("destino")]
-z_index = 4096
-script = ExtResource("15_x241o")
-destino = NodePath("Destino_Pasillo3")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Portales habitacion 4/Portal_Salida4 con pasillo2"]
-z_index = 4096
-position = Vector2(-1621, 3152.0002)
-rotation = 3.1398873
-shape = SubResource("CircleShape2D_x241o")
-
-[node name="Destino_Pasillo3" type="Marker2D" parent="Portales habitacion 4/Portal_Salida4 con pasillo2"]
-position = Vector2(-1729, 3144)
-
-[node name="Portales habitacion 5" type="Node2D" parent="."]
-
-[node name="Portal_Salida5 con pasillo4" type="Area2D" parent="Portales habitacion 5" node_paths=PackedStringArray("destino")]
-z_index = 4096
-script = ExtResource("15_x241o")
-destino = NodePath("Destino_Pasillo4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Portales habitacion 5/Portal_Salida5 con pasillo4"]
-z_index = 4096
-position = Vector2(-1480.0001, 2928.0002)
-rotation = 3.1398873
-shape = SubResource("CircleShape2D_x241o")
-
-[node name="Destino_Pasillo4" type="Marker2D" parent="Portales habitacion 5/Portal_Salida5 con pasillo4"]
-position = Vector2(-1398, 2967)
-
-[node name="Portales habitacion 6" type="Node2D" parent="."]
-
-[node name="Portal_Salida4 con pasillo6" type="Area2D" parent="Portales habitacion 6" node_paths=PackedStringArray("destino")]
-z_index = 4096
-script = ExtResource("15_x241o")
-destino = NodePath("Destino_Pasillo6")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Portales habitacion 6/Portal_Salida4 con pasillo6"]
-z_index = 4096
-position = Vector2(-1789, 2882)
-rotation = 3.1398873
-shape = SubResource("CircleShape2D_x241o")
-
-[node name="Destino_Pasillo6" type="Marker2D" parent="Portales habitacion 6/Portal_Salida4 con pasillo6"]
-position = Vector2(-1704, 2896)
-
-[node name="Portal_Salida6 con pasillo9y10" type="Area2D" parent="Portales habitacion 6" node_paths=PackedStringArray("destino")]
-z_index = 4096
-position = Vector2(1, 0)
-script = ExtResource("15_x241o")
-destino = NodePath("Destino_Pasillo9y10")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Portales habitacion 6/Portal_Salida6 con pasillo9y10"]
-z_index = 4096
-position = Vector2(-1929, 2799)
-rotation = -1.5708362
-shape = SubResource("CircleShape2D_2jlo3")
-
-[node name="Destino_Pasillo9y10" type="Marker2D" parent="Portales habitacion 6/Portal_Salida6 con pasillo9y10"]
-position = Vector2(-1936, 2708)
-
-[node name="Portales habitacion 7" type="Node2D" parent="."]
-
-[node name="Portal_Salida7 con pasillo2" type="Area2D" parent="Portales habitacion 7" node_paths=PackedStringArray("destino")]
-z_index = 4096
-script = ExtResource("15_x241o")
-destino = NodePath("Destino_Pasillo2")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Portales habitacion 7/Portal_Salida7 con pasillo2"]
-z_index = 4096
-position = Vector2(-2164, 2958.0002)
-rotation = 3.1398873
-shape = SubResource("CircleShape2D_x241o")
-
-[node name="Destino_Pasillo2" type="Marker2D" parent="Portales habitacion 7/Portal_Salida7 con pasillo2"]
-position = Vector2(-2168, 3018)
-
-[node name="Portal_Salida7 con pasillo8" type="Area2D" parent="Portales habitacion 7" node_paths=PackedStringArray("destino")]
-z_index = 4096
-script = ExtResource("15_x241o")
-destino = NodePath("Destino_Pasillo8")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Portales habitacion 7/Portal_Salida7 con pasillo8"]
-z_index = 4096
-position = Vector2(-2209, 2915)
-rotation = 3.1398873
-shape = SubResource("CircleShape2D_x241o")
-
-[node name="Destino_Pasillo8" type="Marker2D" parent="Portales habitacion 7/Portal_Salida7 con pasillo8"]
-position = Vector2(-2247, 2887)
-
-[node name="Portal_Salida7 con pasillo9" type="Area2D" parent="Portales habitacion 7" node_paths=PackedStringArray("destino")]
-z_index = 4096
-script = ExtResource("15_x241o")
-destino = NodePath("Destino_Pasillo9")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Portales habitacion 7/Portal_Salida7 con pasillo9"]
-z_index = 4096
-position = Vector2(-2168.0002, 2823.0002)
-rotation = 3.1398873
-shape = SubResource("CircleShape2D_x241o")
-
-[node name="Destino_Pasillo9" type="Marker2D" parent="Portales habitacion 7/Portal_Salida7 con pasillo9"]
-position = Vector2(-2166, 2751)
-
-[node name="Portales habitacion 8" type="Node2D" parent="."]
-
-[node name="Portal_Salida8 con pasillo7" type="Area2D" parent="Portales habitacion 8" node_paths=PackedStringArray("destino")]
-z_index = 4096
-script = ExtResource("15_x241o")
-destino = NodePath("Destino_Pasillo7")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Portales habitacion 8/Portal_Salida8 con pasillo7"]
-z_index = 4096
-position = Vector2(-2281.0005, 2887)
-rotation = 3.1398873
-shape = SubResource("CircleShape2D_x241o")
-
-[node name="Destino_Pasillo7" type="Marker2D" parent="Portales habitacion 8/Portal_Salida8 con pasillo7"]
-position = Vector2(-2247, 2887)
-
-[node name="Portales habitacion 9" type="Node2D" parent="."]
-
-[node name="Portal_Salida9 con pasillo7" type="Area2D" parent="Portales habitacion 9" node_paths=PackedStringArray("destino")]
-z_index = 4096
-script = ExtResource("15_x241o")
-destino = NodePath("Destino_Pasillo7")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Portales habitacion 9/Portal_Salida9 con pasillo7"]
-z_index = 4096
-position = Vector2(-2166.0002, 2688.0002)
-rotation = 3.1398873
-shape = SubResource("CircleShape2D_x241o")
-
-[node name="Destino_Pasillo7" type="Marker2D" parent="Portales habitacion 9/Portal_Salida9 con pasillo7"]
-position = Vector2(-2166, 2750)
-
-[node name="Portal_Salida9 con pasillo6y10" type="Area2D" parent="Portales habitacion 9" node_paths=PackedStringArray("destino")]
-z_index = 4096
-script = ExtResource("15_x241o")
-destino = NodePath("Destino_Pasillo6y10")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Portales habitacion 9/Portal_Salida9 con pasillo6y10"]
-z_index = 4096
-position = Vector2(-2093.0002, 2635.0002)
-rotation = 3.1398873
-shape = SubResource("CircleShape2D_x241o")
-
-[node name="Destino_Pasillo6y10" type="Marker2D" parent="Portales habitacion 9/Portal_Salida9 con pasillo6y10"]
-position = Vector2(-1962, 2611)
-
-[node name="Portales habitacion 10" type="Node2D" parent="."]
-
-[node name="Portal_Salida10 con pasillo6y8" type="Area2D" parent="Portales habitacion 10" node_paths=PackedStringArray("destino")]
-z_index = 4096
-script = ExtResource("15_x241o")
-destino = NodePath("Destino_Pasillo9y6")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Portales habitacion 10/Portal_Salida10 con pasillo6y8"]
-z_index = 4096
-position = Vector2(-1768, 2637)
-rotation = 3.1398873
-shape = SubResource("CircleShape2D_x241o")
-
-[node name="Destino_Pasillo9y6" type="Marker2D" parent="Portales habitacion 10/Portal_Salida10 con pasillo6y8"]
-position = Vector2(-1901, 2640)
+[node name="Destino_Pasillo5" type="Marker2D" parent="Portal_Salida4 con pasillo5"]
+position = Vector2(-1399, 2967)
 
 [connection signal="body_entered" from="RegionRepresentation/Habitacion_10/RoomSensor" to="RegionRepresentation/Habitacion_10/RoomSensor" method="_on_body_entered"]
 [connection signal="body_exited" from="RegionRepresentation/Habitacion_10/RoomSensor" to="RegionRepresentation/Habitacion_10/RoomSensor" method="_on_body_exited"]

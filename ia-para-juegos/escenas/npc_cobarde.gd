@@ -30,6 +30,15 @@ var nodos_por_visitar: Array = []
 enum State { SPINNING, PANIC, FLEE, RELAXING }
 var current_state = State.SPINNING
 
+# --- [NUEVO] PERFIL TÁCTICO: EL MIEDOSO ---
+# Define qué le gusta y qué odia
+var mis_pesos = {
+	"w_cobertura": -0.8, # Le encanta la cobertura (reduce costo, lo atrae)
+	"w_luz": 4.0,        # Odia la luz (aumenta costo, la evita)
+	"w_alto": 0.0,       # Le da igual la altura
+	"w_peligro": 20.0    # TERROR absoluto al jugador (evita acercarse a él a toda costa)
+}
+
 func _ready():
 	timer_recalculo = Timer.new()
 	timer_recalculo.wait_time = 0.5
@@ -73,16 +82,12 @@ func set_state(new_state):
 			
 		State.RELAXING:
 			timer_recalculo.stop()
-			# PREPARAR LA RONDA DE INSPECCIÓN
+			# PREPARAR LA RONDA DE INSPECCIÓN TÁCTICA
 			if room_graph_manual and "astar" in room_graph_manual:
-				# Obtenemos TODOS los IDs de los puntos de la sala
 				nodos_por_visitar = room_graph_manual.astar.get_point_ids()
-				# Los mezclamos para que revise en orden aleatorio (más natural)
 				nodos_por_visitar.shuffle()
-				# Empezar a moverse al primero
 				_ir_al_siguiente_nodo_inspeccion()
 			else:
-				# Si no hay grafo, pasamos directo a girar
 				set_state(State.SPINNING)
 
 func _physics_process(delta):
@@ -97,12 +102,9 @@ func _physics_process(delta):
 
 	# 2. Cambio de Comportamiento
 	if player_room == habitacion_actual_npc:
-		# SI EL JUGADOR ENTRA: PÁNICO INMEDIATO
 		if current_state == State.SPINNING or current_state == State.RELAXING:
 			set_state(State.PANIC)
 	else:
-		# SI EL JUGADOR SE VA:
-		# Solo si estábamos en pánico o huyendo, pasamos a revisar la zona.
 		if current_state == State.FLEE or current_state == State.PANIC:
 			set_state(State.RELAXING)
 
@@ -110,15 +112,12 @@ func _physics_process(delta):
 	match current_state:
 		State.FLEE:
 			_mover_por_ruta_huida(delta)
-			
 		State.RELAXING:
 			_mover_por_ruta_inspeccion(delta)
-			
 		State.SPINNING:
 			velocity = velocity.lerp(Vector2.ZERO, acceleration * delta)
 			rotation += spin_speed * delta
 			move_and_slide()
-			
 		State.PANIC:
 			velocity = Vector2.ZERO
 			_rotar_hacia_objetivo(player.global_position, delta)
@@ -146,41 +145,47 @@ func _mover_por_ruta_huida(delta):
 
 # --- LÓGICA DE MOVIMIENTO INSPECCIÓN (RELAXING) ---
 func _mover_por_ruta_inspeccion(delta):
-	# Si se acabó el tramo actual, pedimos el siguiente nodo de la lista
 	if ruta_manual.is_empty() or indice_ruta >= ruta_manual.size():
 		_ir_al_siguiente_nodo_inspeccion()
 		return
 
 	var objetivo = ruta_manual[indice_ruta]
 	
-	# Usamos umbral estricto
 	if global_position.distance_to(objetivo) < arrival_threshold:
 		indice_ruta += 1
 		return
 
 	var dir = (objetivo - global_position).normalized()
-	# Velocidad un poco más calmada para inspeccionar (80% de la normal)
 	velocity = velocity.lerp(dir * (speed * 0.8), acceleration * delta)
 	move_and_slide()
 	_rotar_hacia_movimiento(delta)
 
 func _ir_al_siguiente_nodo_inspeccion():
-	# Si ya no quedan nodos por revisar, terminamos
 	if nodos_por_visitar.is_empty():
 		set_state(State.SPINNING)
 		return
 	
 	if not room_graph_manual: return
 	
-	# Sacamos el siguiente ID de la lista
 	var siguiente_id = nodos_por_visitar.pop_front()
-	var mi_id = room_graph_manual.astar.get_closest_point(global_position)
+	var destino = room_graph_manual.astar.get_point_position(siguiente_id)
 	
-	# Calculamos ruta hacia ese nodo
-	ruta_manual = room_graph_manual.astar.get_point_path(mi_id, siguiente_id)
+	# [CAMBIO TÁCTICO] Usar ruta inteligente para ir al siguiente punto
+	if room_graph_manual.has_method("obtener_ruta_tactica"):
+		ruta_manual = room_graph_manual.obtener_ruta_tactica(
+			global_position, 
+			destino, 
+			mis_pesos, 
+			player.global_position
+		)
+	else:
+		# Fallback al pathfinding normal
+		var mi_id = room_graph_manual.astar.get_closest_point(global_position)
+		ruta_manual = room_graph_manual.astar.get_point_path(mi_id, siguiente_id)
+		
 	indice_ruta = 0
 
-# --- CEREBRO: BUSCAR REFUGIO ---
+# --- CEREBRO: BUSCAR REFUGIO (AHORA TÁCTICO) ---
 func _buscar_refugio_lejos():
 	if not room_graph_manual or not "astar" in room_graph_manual: return
 	
@@ -188,19 +193,22 @@ func _buscar_refugio_lejos():
 	var id_npc = astar.get_closest_point(global_position)
 	var id_player = astar.get_closest_point(player.global_position)
 	
+	# 1. ¿Qué tan lejos estoy? (Usamos distancia física simple para esto)
 	var ruta_actual = astar.get_point_path(id_player, id_npc)
 	var distancia_en_nodos = ruta_actual.size()
 	
-	# Anti-Tembleque: Si ya voy hacia allá y estoy lejos, no cambio
 	if not ruta_manual.is_empty():
 		if distancia_en_nodos > 2: return 
 			
 	if ruta_manual.is_empty() and distancia_en_nodos > min_node_distance + 1:
 		return
 
+	# 2. Seleccionar el mejor destino
 	var mejor_punto = -1
 	var max_distancia_nodos = -1
 	
+	# Aquí seguimos buscando el punto "más lejano" en distancia bruta,
+	# pero LLEGAREMOS a él usando el camino táctico.
 	for punto_id in astar.get_point_ids():
 		var ruta_posible = astar.get_point_path(id_player, punto_id)
 		var dist = ruta_posible.size()
@@ -208,8 +216,21 @@ func _buscar_refugio_lejos():
 			max_distancia_nodos = dist
 			mejor_punto = punto_id
 	
+	# 3. Calcular la ruta TÁCTICA hacia ese refugio
 	if mejor_punto != -1 and mejor_punto != id_npc:
-		ruta_manual = astar.get_point_path(id_npc, mejor_punto)
+		var destino_pos = astar.get_point_position(mejor_punto)
+		
+		# [CAMBIO TÁCTICO] Calculamos ruta evitando luz y peligro
+		if room_graph_manual.has_method("obtener_ruta_tactica"):
+			ruta_manual = room_graph_manual.obtener_ruta_tactica(
+				global_position, 
+				destino_pos, 
+				mis_pesos, 
+				player.global_position
+			)
+		else:
+			ruta_manual = astar.get_point_path(id_npc, mejor_punto)
+			
 		indice_ruta = 0
 
 func _on_recalculate_timer():
