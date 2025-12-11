@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmrmq3p5rcw63"]
+
+[ext_resource type="Script" uid="uid://7ll5dkfg32xm" path="res://EfectoMuerte.gd" id="1_l1ocb"]
+
+[node name="CPUParticles2D" type="CPUParticles2D"]
+z_index = 4096
+emitting = false
+amount = 30
+explosiveness = 1.0
+lifetime_randomness = 0.84
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 52.65
+initial_velocity_max = 62.15
+scale_amount_min = 5.13
+scale_amount_max = 10.25
+color = Color(1, 0.20392157, 0.45490196, 1)
+script = ExtResource("1_l1ocb")

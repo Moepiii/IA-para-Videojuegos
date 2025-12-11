@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dypmbhf0uraox"]
+
+[ext_resource type="Script" uid="uid://x78ir6irl7yk" path="res://hud.gd" id="1_m5lxu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5u87e"]
+font_color = Color(1, 1, 0.18431373, 1)
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_m5lxu")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -2.0
+offset_top = 1.0
+offset_right = 87.0
+offset_bottom = 24.0
+text = "Monedas: 0"
+label_settings = SubResource("LabelSettings_5u87e")

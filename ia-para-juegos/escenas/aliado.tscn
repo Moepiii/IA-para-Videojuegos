@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqtl3lesqo43o"]
+
+[ext_resource type="Script" uid="uid://cyn15vs75ilp4" path="res://escenas/aliado.gd" id="1_dp13n"]
+[ext_resource type="Texture2D" uid="uid://bdiwueu1v3mt8" path="res://Scrips/Screenshot_73-removebg-preview.png" id="1_gq5pc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dp13n"]
+radius = 1.0
+height = 6.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_dp13n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.9073486e-06, -9.536743e-07)
+scale = Vector2(0.071202494, 0.1234472)
+texture = ExtResource("1_gq5pc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("CapsuleShape2D_dp13n")

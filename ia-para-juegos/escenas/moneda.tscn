@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://6iyjaj6q4uo6"]
+
+[ext_resource type="Script" uid="uid://nlsuryala43c" path="res://moneda.gd" id="1_ponsd"]
+[ext_resource type="Texture2D" uid="uid://dqnpmd5susqrr" path="res://Scrips/Screenshot_74-removebg-preview.png" id="2_tr4to"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_psyt8"]
+radius = 5.0
+
+[node name="Moneda" type="Area2D"]
+script = ExtResource("1_ponsd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(9.536743e-07, 0)
+scale = Vector2(0.03787879, 0.040000007)
+texture = ExtResource("2_tr4to")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_psyt8")

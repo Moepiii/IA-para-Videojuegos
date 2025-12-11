@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://ce4qx2fidf6ba"]
+
+[ext_resource type="Script" uid="uid://d1lsdloo46n07" path="res://bala.gd" id="1_ag3k0"]
+[ext_resource type="Texture2D" uid="uid://clgyuwmnsruvp" path="res://Scrips/Screenshot_62.png" id="2_tqo1u"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t4wd0"]
+radius = 300.29147
+
+[node name="Bala" type="Area2D"]
+z_index = 4096
+script = ExtResource("1_ag3k0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.50000024, -0.49999994)
+scale = Vector2(0.008333333, 0.009900989)
+texture = ExtResource("2_tqo1u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.9999994, 1.8626456e-09)
+rotation = -1.576008
+scale = Vector2(0.0053526806, 0.0042535276)
+skew = -0.0030417442
+shape = SubResource("CircleShape2D_t4wd0")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+rect = Rect2(-5, -2, 9, 4)
